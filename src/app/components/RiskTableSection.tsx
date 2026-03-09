@@ -46,12 +46,8 @@ export function RiskTableSection({ risks, onChange }: RiskTableSectionProps) {
   return (
     <section className="mb-8 pt-8 border-t border-gray-200">
       <h2 className="text-xl font-semibold text-blue-900 mb-4 pb-2 border-b-2 border-blue-600">
-        11. Итоговая таблица аудита сайта
+        Таблица аудита сайта
       </h2>
-      
-      <p className="text-sm text-gray-600 mb-4">
-        Заполните таблицу выявленных рисков на основе проведённого аудита всех разделов.
-      </p>
       
       <div className="overflow-x-auto">
         <table className="w-full border-collapse border border-gray-300 mb-4">
@@ -143,15 +139,6 @@ export function RiskTableSection({ risks, onChange }: RiskTableSectionProps) {
         <Plus className="w-4 h-4" />
         Добавить риск
       </button>
-      
-      <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-md">
-        <p className="text-sm font-medium text-blue-900 mb-3">💡 Финальные вопросы после аудита:</p>
-        <ol className="text-sm text-blue-800 space-y-2 list-decimal list-inside">
-          <li>Какие ключевые риски есть у онлайн-школы?</li>
-          <li>Какие юридические услуги можно предложить клиенту?</li>
-          <li>Какие нарушения можно устранить быстро, а какие требуют сопровождения?</li>
-        </ol>
-      </div>
     </section>
   );
 }
