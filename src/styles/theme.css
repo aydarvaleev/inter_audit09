@@ -221,6 +221,21 @@
       padding: 2px 0 !important;
     }
     
+    /* Для textarea в таблице - автоматическая высота и перенос текста */
+    textarea {
+      height: auto !important;
+      min-height: auto !important;
+      white-space: pre-wrap !important;
+      word-wrap: break-word !important;
+      overflow: visible !important;
+    }
+    
+    /* Ячейки таблицы - автоматическая высота */
+    td {
+      height: auto !important;
+      vertical-align: top !important;
+    }
+    
     input[type="checkbox"] {
       -webkit-appearance: checkbox;
       appearance: checkbox;
