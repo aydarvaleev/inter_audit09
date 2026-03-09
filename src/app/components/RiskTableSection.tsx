@@ -84,37 +84,49 @@ export function RiskTableSection({ risks, onChange }: RiskTableSectionProps) {
                     <textarea
                       value={risk.risk}
                       onChange={(e) => updateRisk(index, 'risk', e.target.value)}
-                      className="w-full px-2 py-1 border-0 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded resize-none"
+                      className="w-full px-2 py-1 border-0 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded resize-none print:hidden"
                       placeholder="Описание риска"
                       rows={2}
                     />
+                    <div className="hidden print:block whitespace-pre-wrap break-words text-sm">
+                      {risk.risk}
+                    </div>
                   </td>
                   <td className="border border-gray-300 px-2 py-2">
                     <input
                       type="text"
                       value={risk.norm}
                       onChange={(e) => updateRisk(index, 'norm', e.target.value)}
-                      className="w-full px-2 py-1 border-0 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded"
+                      className="w-full px-2 py-1 border-0 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded print:hidden"
                       placeholder="ст. ХХ ФЗ №..."
                     />
+                    <div className="hidden print:block whitespace-pre-wrap break-words text-sm">
+                      {risk.norm}
+                    </div>
                   </td>
                   <td className="border border-gray-300 px-2 py-2">
                     <textarea
                       value={risk.consequences}
                       onChange={(e) => updateRisk(index, 'consequences', e.target.value)}
-                      className="w-full px-2 py-1 border-0 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded resize-none"
+                      className="w-full px-2 py-1 border-0 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded resize-none print:hidden"
                       placeholder="Штраф, блокировка..."
                       rows={2}
                     />
+                    <div className="hidden print:block whitespace-pre-wrap break-words text-sm">
+                      {risk.consequences}
+                    </div>
                   </td>
                   <td className="border border-gray-300 px-2 py-2">
                     <textarea
                       value={risk.recommendation}
                       onChange={(e) => updateRisk(index, 'recommendation', e.target.value)}
-                      className="w-full px-2 py-2 border-0 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded resize-none"
+                      className="w-full px-2 py-2 border-0 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded resize-none print:hidden"
                       placeholder="Что нужно сделать"
                       rows={2}
                     />
+                    <div className="hidden print:block whitespace-pre-wrap break-words text-sm">
+                      {risk.recommendation}
+                    </div>
                   </td>
                   <td className="border border-gray-300 px-2 py-2 text-center print:hidden">
                     <button
